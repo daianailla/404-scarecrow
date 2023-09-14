@@ -5,91 +5,138 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1,
-  maximum-scale=5"ß
+    maximum-scale=5"
     />
-
-    <link rel="icon" href="devchallenges.png" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>Devchallenges</title>
-
     <style>
+      html {
+        height: 100%;
+        margin: 0;
+      }
+
       body {
-        font-family: "Poppins", sans-serif;
+        height: 100%;
+        margin: 0;
       }
-
-      ul {
-        padding-left: 24px;
+      #header {
+        font-family: "Inconsolata";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        color: #333;
+        margin: 0 0 0 40px;
       }
-
-      li {
-        margin-bottom: 8px;
+      #image {
+        width: 539px;
+        margin: 0 0 0 40px;
       }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
+      #title {
+        font-family: "Space Mono";
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        color: var(--gray-1, #333);
+        line-height: normal;
+        letter-spacing: -2.24px;
+        width: 586px;
       }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
+      #paragraph {
+        font-family: Space Mono;
+        font-size: 24px;
+        font-style: normal;
         font-weight: 400;
+        color: var(--gray-2, #4f4f4f);
+        width: 381px;
+        line-height: normal;
+        letter-spacing: -0.84px;
+        margin: 0 0 64px;
       }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
+      #backbutton {
+        font-family: Space Mono;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        background: var(--gray-1, #333);
+        width: 216px;
+        height: 68px;
+        flex-shrink: 0;
       }
-
-      .welcome-text a {
-        color: #f7542e;
+      #content {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 119px;
+      }
+      #signature {
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        color: #bdbdbd;
+      }
+      #wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* margin: 40px 119px 24px 77px; */
+      }
+      @media screen and (max-width: 450px) {
+        #content {
+          grid-template-columns: 1fr;
+          align-items: center;
+        }
+        #image {
+          width: 287px;
+          margin: 0 0 0 40px;
+        }
+        #title {
+          font-size: 48px;
+          width: 350px;
+          margin: 24px;
+        }
+        #paragraph {
+          font-size: 18px;
+          width: 328px;
+          margin: 0 0 24px 30px;
+        }
+        #backbutton {
+          margin: 66px 0 0 24px ;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
+    <div id="wrapper">
+      <nav id="navigation">
+        <h2 id="header">404 Not found</h2>
+      </nav>
+      <main id="content">
+        <div><img src="Scarecrow.png" alt="Scarecrow" id="image" /></div>
+        <div>
+          <h1 id="title">I have bad news for you</h1>
 
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
+          <p id="paragraph">
+            The page you are looking for might be removed or is temporarily
+            unavailoble
+          </p>
 
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+          <button id="backbutton">Back to homepage</button>
+        </div>
+      </main>
+      <footer id="signature">
+        created by <b>Daiana</b> - devchallenges.io
+      </footer>
     </div>
   </body>
 </html>
